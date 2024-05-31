@@ -59,13 +59,77 @@ header nav ul li a:hover::after{
     background-color: #508fce;
 }
 
-header nav ul li button{
+.getStarted-button{
     padding: 10px 8px;
     border: none;
     border-radius: 6px;
 
     background-color: #0b7bec;
     color: #fff;
+}
+
+header .open{
+    display: none;
+
+    width: 40px;
+    height: 40px;
+    border: none;
+
+    outline: none;
+    background: url("assets/icones/menu_icon.svg") no-repeat center/cover;
+}
+
+/* Menu Hamburguer */
+.hamburger-menu.active{
+    display: flex;
+}
+
+.hamburger-menu{
+
+    width: 100%;
+    height: 100vh;
+
+    position: absolute;
+    top: 0;
+    z-index: 99;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #e7edf0;
+}
+
+.hamburger-menu nav ul{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.hamburger-menu nav ul li{
+    list-style: none;
+}
+
+.hamburger-menu nav ul li a{
+    font-size: 22px;
+    text-decoration: none;
+
+    color: #0b7bec;
+}
+
+.hamburger-menu .close{
+    width: 30px;
+    height: 30px;
+    border: none;
+    margin: 15px;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    outline: none;
+    background: url("assets/icones/close_icon.svg") no-repeat center/cover;
 }
 
 /* Conteudo principal */
@@ -97,4 +161,15 @@ footer p a{
     font-weight: 600;
 
     color: #508fce;
+}
+
+/* Responsividade */
+@media screen and (max-width: 750px) {
+    header nav{
+        display: none;
+    }
+
+    header .hamburger-button{
+        display: block;
+    }
 }
